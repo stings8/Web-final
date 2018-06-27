@@ -1,0 +1,240 @@
+@font-face {
+    font-family: 'OpenSans';
+    src: url("../fonts/OpenSans-Regular.ttf");
+    font-size: 1em;
+}
+@font-face {
+    font-family: 'OpenSansLight';
+    src: url("../fonts/OpenSans-Light.ttf");
+    font-size: 1em;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+header {
+    height: 160px;
+    width: 100%;
+    background-attachment: fixed;
+    background-image: linear-gradient(
+         to top right,
+         rgb(37, 5, 63),
+         rgb(105, 4, 100)
+     );
+}
+
+header .container {
+    position: relative;
+}
+
+header #logotipo {
+    position: absolute;
+    height: 190px;
+    width: 350px;
+    top: -60px;
+    left: -72px;
+}
+
+ul {
+    list-style: none;   
+}
+
+header .barra {
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    text-align: center;
+    
+}
+header .barra ul {
+    margin-left: -166px;
+    line-height: 48px;
+}
+
+header .barra li {
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+header .barra li a {
+    color: #fff;
+    margin-left: 65px;
+   
+}
+
+header .barra .btn {
+    background-color: DodgerBlue; /* Blue background */
+    border: none; /* Remove borders */
+    color: white; /* White text */
+    width: 65px;
+    height: 36px;
+    top: -8px;
+    position: absolute;
+
+}
+
+.btn:hover {
+    background-color: RoyalBlue;
+}
+
+header .pesquisa {
+    max-width: 777px;
+    left: 2px;
+    line-height: 15px;
+    margin-top: 25px;
+    top: -12px;
+}
+
+button, input, optgroup, select, textarea {
+    line-height: 28px;
+    margin-top: 23px;
+    width: 500px;
+    
+}
+
+.input-group {
+    margin-left: 100px;
+}
+
+#slides {
+    margin-top: 20px;
+}
+
+#principal {
+    margin-top: 40px;
+}
+
+#principal .central h2 {
+   margin-bottom: 15px;
+}
+
+#principal h2 {
+    text-align: center;
+    left: 200px;
+}
+
+#principal h3{
+    text-align: left;
+}
+
+.resto {
+    padding-top: 200px;
+    
+}
+
+.resto {
+    background-size: cover;
+    background-attachment: fixed;
+   background-image: linear-gradient(
+        to top right,
+        purple,
+        tomato
+    );
+}
+
+.secundario {
+    margin-top: 40px;
+}
+
+.secundario .central h2 {
+   margin-bottom: 15px;
+}
+
+.secundario h2 {
+    text-align: center;
+    left: 200px;
+}
+
+.secundario h3{
+    margin-top: 10px;
+    text-align: left;
+}
+
+.page-footer {
+    background-attachment: fixed;
+    background-image: linear-gradient(
+         to top right,
+         rgb(4, 0, 8),
+         rgb(12, 0, 46)
+     );
+}
+
+
+
+/* --------- Pagamento ------------- */
+
+
+#pagamento {
+    margin-top: 50px;
+   
+}
+
+.img-thumbnail {
+	height: 260px;
+}
+
+
+.container .col-sm-4 .panel-body dl {
+	list-style: none;
+	font-family: 'OpenSans';
+	font-size: 18px;
+	color: #000;
+	margin-top: 10px;
+	
+}
+
+#pagemento.container {
+    width: 50%;
+    
+}
+
+.container.formulario {
+    width: 50%;
+    padding-top: 10px;
+	padding-bottom: 10px;
+    height: 560px;
+    margin-bottom: 70px;
+}
+
+
+
+#pagamento label {
+	font-size: 12px !important;
+}
+
+
+#pagamento .row {
+	margin-right: 194px;
+    margin-left: 156px;
+}
+
+
+#pagamento .container .colunas{
+	width: 60%;
+    margin-bottom: 30px;
+	margin-top: 60px;
+	padding-top: 20px;
+    padding-bottom: 20px;
+	
+}
+
+#pagamento .col {
+	margin-left: 60px;
+
+}
+.fa-credit-card:before, .fa-barcode:before, .fa-money-check-alt:before, .fa-cc-paypal:before {
+	font-size: 50px;
+	
+}
+.formulario .form-group .cartoes {
+	margin-left: -34px;
+}
+
+.fa-cc-mastercard:before, .fa-cc-amex:before, .fa-cc-visa:before {
+	font-size: 20px;
+}
+button, input, optgroup, select, textarea {
+    margin-top: 10px;
+/*-----------------------------------------------------------------*/

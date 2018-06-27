@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/cadastro.css">
+    <title>Ecommerce</title>
+</head>
+<body>
+<header>
+    <div class="barra">
+
+    </div>
+
+    <div class="container">
+        <a href="/"><img id="logotipo" alt="logotipo" src="../img/logo.png"></a>
+    </div>
+</header>
+
+
+    <div id="cadastro" class="container">
+        <div class="container">
+            <li style="list-style: none; display: inline;"><i class="far fa-user"></i><h2>Cadastre-se </h2></li>
+            
+        </div>
+        <hr>
+        <form th:object="${usuario}" action="/save" method="post" >
+        <div class="container campos">
+            <div class="form-group">
+                <label>Nome</label>
+                <input type="text" class="form-control" id="nomeCliente" name="nome">
+            </div>
+            <div class="form-group">
+                    <label>Email</label>
+                    <input type="text" class="form-control" id="emailCliente" name="email">
+            </div>
+            <div class="form-group">
+                    <label>Senha</label>
+                    <input type="text" class="form-control" id="senhaCliente" name="senha">
+            </div>
+            <button class="btn btn-success"  style="width: 50%" type="submit">Submit form</button>
+
+        </div>
+        </form>
+
+    </div>
+<!-- Footer -->
+
+<footer class="page-footer font-small cyan darken-3 mt-4">
+    <div class="container">
+        <div class="row">
+        <div class="col-md-12 py-5">
+            <div class="mb-5 flex-center">
+            <a class="fb-ic" href="https://www.facebook.com/sting.silva.9">
+                <i class="fa fa-facebook fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+            </a>
+            <a class="ins-ic" href="https://www.instagram.com/stings8/">
+                <i class="fa fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+            </a>
+            <a class="tw-ic" href="https://github.com/stings8">
+                <i class="fa fa-github fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+            </a>
+            <a class="gplus-ic" href="#">
+                <i class="fa fa-google-plus fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+            </a>
+            <a class="li-ic"  href="#">
+                <i class="fa fa-linkedin fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+            </a>
+            <a class="pin-ic" href="#">
+                <i class="fa fa-pinterest fa-lg white-text fa-2x"> </i>
+            </a>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="footer-copyright text-center py-3">© 2018 Copyright:
+        <a href="mailto:sting@alu.ufc.br">sting@alu.ufc.br</a>
+    </div>
+</footer>
+
+<script src="../js/popper.min.js"></script>   
+<script src="../jquery/jquery.min.js"></script>     
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</html>

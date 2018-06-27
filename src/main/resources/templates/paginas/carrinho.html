@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br"
+      xmlns="http://www.w3.org/1999/xhtml" xml:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+          integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/carrinho.css">
+    <title>Ecommerce</title>
+</head>
+<body>
+<header>
+    <div class="barra">
+
+        <div class="container">
+            <ul>
+            <li class="carrinho"><a href="carrinho"> <i class="fas fa-shopping-cart" style="font-size: 25px; color: white"></i></a></li>
+            <li class="logar"><a href="login"><i class="fas fa-user-circle" style="font-size: 25px; color: white"></i></a></li>
+
+            </ul>
+        </div>
+
+    </div>
+
+
+    <div class="container">
+        <a href="/"><img id="logotipo" alt="logotipo" src="../img/logo.png"></a>
+    </div>
+
+    <div class="container pesquisa">
+        <div class="input-group">
+            <input type="text" placeholder="Pesquisar...">
+
+        </div>
+    </div>
+
+
+</header>
+
+
+<div id="carrinho" class="container">
+    <div class="row">
+        <div class="col-8 lista">
+
+            <div class="row">
+
+                <div class="col-6">
+                    <li>Produto</li>
+                </div>
+                <div class="col-3">
+                    <li>Qtd</li>
+                </div>
+                <div class="col-3">
+                    <li>Preço</li>
+                </div>
+            </div>
+            <hr>
+        </div>
+
+        <div class="col-4 total">
+            <li>Resumo do pedido</li>
+            <hr>
+            <li>Total</li>
+            <hr>
+            <li>
+                <button class="btn btn-group btn-success">Continuar</button>
+            </li>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+
+<footer class="page-footer font-small cyan darken-3 mt-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 py-5">
+                <div class="mb-5 flex-center">
+                    <a class="fb-ic" href="https://www.facebook.com/sting.silva.9">
+                        <i class="fa fa-facebook fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                    </a>
+                    <a class="ins-ic" href="https://www.instagram.com/stings8/">
+                        <i class="fa fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                    </a>
+                    <a class="tw-ic" href="https://github.com/stings8">
+                        <i class="fa fa-github fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                    </a>
+                    <a class="gplus-ic" href="#">
+                        <i class="fa fa-google-plus fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                    </a>
+                    <a class="li-ic" href="#">
+                        <i class="fa fa-linkedin fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                    </a>
+                    <a class="pin-ic" href="#">
+                        <i class="fa fa-pinterest fa-lg white-text fa-2x"> </i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright text-center py-3">© 2018 Copyright:
+        <a href="mailto:sting@alu.ufc.br">sting@alu.ufc.br</a>
+    </div>
+</footer>
+
+<script src="../js/popper.min.js"></script>
+<script src="../jquery/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</html>

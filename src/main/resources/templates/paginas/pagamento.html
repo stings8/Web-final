@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/pagamento.css">
+    <title>Ecommerce</title>
+</head>
+<body>
+<header>
+    <div class="barra">
+    
+            <div class="container">
+                <ul>
+                    <li class="carrinho"><i class="fas fa-shopping-cart" style="font-size: 25px; color: white"></i></li>
+                    
+                    <li>
+                        <button class="btn dropdown"><li class="logar"><i class="fas fa-user-circle" style="font-size: 25px; color: white"></i></li></button>
+                        <div class="dropdown-menu">
+                               
+                        </div>
+                    </li>
+                    
+                </ul>
+            </div>
+    
+        </div>
+
+
+        <div class="container">
+            <img id="logotipo" alt="logotipo" src="../img/logo.png">
+        </div> 
+
+        <div class="container pesquisa">
+                <div class="input-group">
+                    <input type="text" placeholder="Pesquisar...">
+                    
+                </div>
+        </div>
+        
+
+</header>
+
+<!-- Pagamento-->
+
+<div id="pagamento" class="container">
+        <div class="row colunas">
+            <div class="col">
+                <i class="fas fa-credit-card"></i>
+                <i style="display: block;">Crédito</i>
+            </div>
+            <div class="col">
+                <i class="fas fa-barcode"></i>
+                <i style="display: block;">Boleto</i>
+            </div>
+            <div class="col">
+                <i class="fas fa-money-check-alt"></i>
+                <i style="display: block;"> Debito</i>
+            </div>
+            <div class="col">
+                <i class="fab fa-cc-paypal"></i>
+                <i style="display: block;">PayPal</i>
+            </div>
+        </div>
+    </div>
+    <div class="container formulario" style="background-color: lightgrey" >
+        <form>
+            <div class="form-group">
+                <label for="nome">Numero do cartao</label>
+                <input type="text" class="form-control" id="nomeCliente">
+                <ul style="display: block;" class="cartoes">
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-amex"></i>
+                    <i class="fab fa-cc-visa"></i>
+                </ul>
+            </div>
+            <div class="form-group">
+                <label for="nome">Nome impresso no cartão</label>
+                <input type="text" class="form-control" id="nomeCliente">
+            </div>
+            <div class="form-row">
+                    <div class="form-group col-md-4">
+                            <label for="inputState"></label>
+                            <select id="inputState" class="form-control">
+                              <option selected>Mês</option>
+                              <option>1</option>
+                              <option>2</option>
+                              <option>3</option>
+                              <option>4</option>
+                              <option>5</option>
+                              <option>6</option>
+                              <option>7</option>
+                              <option>8</option>
+                              <option>9</option>
+                              <option>10</option>
+                              <option>11</option>
+                              <option>12</option>
+                            </select>
+                    </div>
+                    <div class="form-group col-md-4">
+                            <label for="inputState"></label>
+                            <select id="inputState" class="form-control">
+                              <option selected>Ano</option>
+                              <option>2018</option>
+                              <option>2019</option>
+                              <option>2020</option>
+                              <option>2021</option>
+                              <option>2022</option>
+                              <option>2023</option>
+                              <option>2024</option>
+                              <option>2025</option>
+                              <option>2026</option>
+                              <option>2027</option>
+                              <option>2028</option>
+                              <option>2029</option>
+                              <option>2030</option>
+                            </select>
+                    </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <label for="inputAddress2">Codigo de validação</label>
+                    <input type="text" class="form-control" id="inputAddress2">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="inputState">Numero de parcelas</label>
+                    <select id="inputState" class="form-control">
+                        <option selected>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                    </select>
+                </div>
+            </div>
+            <button  style="background-color: green"  type="submit" class="btn btn-success">Pagar com cartão</button>
+        </form>
+    </div>
+    
+<!-- Footer -->
+
+<footer class="page-footer font-small cyan darken-3 mt-4">
+    <div class="container">
+        <div class="row">
+        <div class="col-md-12 py-5">
+            <div class="mb-5 flex-center">
+            <a class="fb-ic" href="https://www.facebook.com/sting.silva.9">
+                <i class="fa fa-facebook fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+            </a>
+            <a class="ins-ic" href="https://www.instagram.com/stings8/">
+                <i class="fa fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+            </a>
+            <a class="tw-ic" href="https://github.com/stings8">
+                <i class="fa fa-github fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+            </a>
+            <a class="gplus-ic" href="#">
+                <i class="fa fa-google-plus fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+            </a>
+            <a class="li-ic"  href="#">
+                <i class="fa fa-linkedin fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+            </a>
+            <a class="pin-ic" href="#">
+                <i class="fa fa-pinterest fa-lg white-text fa-2x"> </i>
+            </a>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="footer-copyright text-center py-3">© 2018 Copyright:
+        <a href="mailto:sting@alu.ufc.br">sting@alu.ufc.br</a>
+    </div>
+</footer>
+
+<script src="../js/popper.min.js"></script>   
+<script src="../jquery/jquery.min.js"></script>     
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</html>
