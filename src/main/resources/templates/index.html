@@ -66,8 +66,10 @@
         </div>
         <div class="row img-thumbnail">
             <div class="col-md-3" th:each="p : ${produtos}">
-                <img class="p1" src="img/img1.jpg" width="150" height="194">
-                <h3 th:text="${p.getNome()}"></h3>
+                <img class="p1" th:src="@{img/img.jpg}" width="150" height="194">
+                <h3 th:text="${p.getDescr()}"></h3>
+                <h5 th:text="'R$ ' + ${p.getPreco()}" ></h5>
+                <a></a>
             </div>
         </div>
     </div>
