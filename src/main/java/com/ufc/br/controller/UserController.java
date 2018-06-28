@@ -1,7 +1,6 @@
 package com.ufc.br.controller;
 
 
-import com.sun.org.apache.xpath.internal.operations.Mod;
 import com.ufc.br.model.Produto;
 import com.ufc.br.model.Usuario;
 import com.ufc.br.repository.UsuarioRepository;
@@ -11,7 +10,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.ArrayList;
@@ -56,7 +54,7 @@ public class UserController {
     }
 
     @PostMapping(value = "/save")
-    public ModelAndView salvarUsuario(@PathVariable  Usuario usuario){
+    public ModelAndView salvarUsuario(Usuario usuario){
         System.out.println(usuario);
         uservice.save(usuario);
         ModelAndView mv = new ModelAndView("redirect:/login");
@@ -103,6 +101,10 @@ public class UserController {
 //        mv.addObject("valorToral", total);
         return mv;
     }
+
+
+
+
 
 
 

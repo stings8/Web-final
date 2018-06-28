@@ -34,7 +34,7 @@ public class ProdutoService {
 		return repository.findByFabricante(fabricante);
 	}
 	
-	public Produto save(Produto produto) {
+	public Produto saveP(Produto produto) {
 		return repository.saveAndFlush(produto);
 	}
 	
