@@ -1,6 +1,7 @@
 package com.ufc.br.controller;
 
 
+import com.sun.org.apache.xpath.internal.operations.Mod;
 import com.ufc.br.model.Produto;
 import com.ufc.br.model.Usuario;
 import com.ufc.br.repository.UsuarioRepository;
@@ -8,7 +9,9 @@ import com.ufc.br.service.ProdutoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.ArrayList;
@@ -33,6 +36,7 @@ public class UserController {
         Produto produto = pservice.getOne(1l);
         ModelAndView mv = new ModelAndView( "paginas/carrinho");
         mv.addObject("produtosCarrinho", produtos);
+
         mv.addObject("precoTotal", total);
 
         return mv;
@@ -52,7 +56,7 @@ public class UserController {
     }
 
     @PostMapping(value = "/save")
-    public ModelAndView salvarUsuario(Usuario usuario){
+    public ModelAndView salvarUsuario(@PathVariable  Usuario usuario){
         System.out.println(usuario);
         uservice.save(usuario);
         ModelAndView mv = new ModelAndView("redirect:/login");
@@ -60,19 +64,43 @@ public class UserController {
         return mv;
     }
 
+    @GetMapping("/pagamento")
+    public ModelAndView finalizar(){
+        ModelAndView mv = new ModelAndView( "paginas/pagamento");
+        mv.addObject("produtosCarrinho", produtos);
+        mv.addObject("precoTotal", total);
+        return mv;
 
+    }
+    @PostMapping("/finalizar")
+    public ModelAndView salvarPagamento(@PathVariable Long id){
+        Usuario user = uservice.getOne(id);
+        user.getProdutos().addAll(produtos);
+        uservice.save(user);
+        ModelAndView mv = new ModelAndView("redirect:/listaproduto");
+        mv.addObject("produtos", user.getProdutos());
+        return mv;
+    }
 
+//   @GetMapping(value ="/listaproduto")
+//    public ModelAndView listarProdutos(){
+//
+//        ModelAndView mv = new ModelAndView("/listaproduto");
+//        mv.addObject("produtos", user.getProdutos());
+//        return mv;
+//
+//
+//    }
 
-
-    @GetMapping("/comprar/{id}")
-    public ModelAndView adicionarCompra(Long id){
+    @GetMapping(value ="/comprar/{id}")
+    public ModelAndView adicionarCompra(@PathVariable Long id){
         Produto produto = pservice.getOne(id);
         produtos.add(produto);
         total += produto.getValor();
 
-        ModelAndView mv = new ModelAndView("carrinho");
-        mv.addObject("produtosCliente", produtos);
-        mv.addObject("valorToral", total);
+        ModelAndView mv = new ModelAndView("redirect:/");
+//        mv.addObject("produtosCliente", produtos);
+//        mv.addObject("valorToral", total);
         return mv;
     }
 

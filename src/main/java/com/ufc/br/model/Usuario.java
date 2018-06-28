@@ -66,8 +66,15 @@ public  class Usuario implements Serializable {
 		this.senha = senha;
 	}
 
+    public List<Produto> getProdutos() {
+        return produtos;
+    }
 
-	@Override
+    public void setProdutos(List<Produto> produtos) {
+        this.produtos = produtos;
+    }
+
+    @Override
 	public boolean equals(Object o) {
 		if (this == o) return true;
 		if (!(o instanceof Usuario)) return false;
